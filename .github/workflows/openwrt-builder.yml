@@ -115,6 +115,12 @@ jobs:
       run: |
         cd openwrt/bin/targets/*/*
         rm -rf packages
+        rm -rf *.buildinfo
+        rm -rf sha256sums
+        rm -rf *.manifest
+        rm -rf *kernel.bin
+        rm -rf *rootfs.img.gz
+        rm -rf *.json
         echo "FIRMWARE=$PWD" >> $GITHUB_ENV
         echo "status=success" >> $GITHUB_OUTPUT
 
